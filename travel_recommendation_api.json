@@ -1,0 +1,80 @@
+{
+    "countries": [
+      {
+        "id": 1,
+        "name": "Australia",
+        "cities": [
+          {
+            "name": "Sydney, Australia",
+            "imageUrl": "images/sydney_image.avif",
+            "description": "A vibrant city known for iconic landmarks."
+          },
+          {
+            "name": "Melbourne, Australia",
+            "imageUrl": "images/melbourene_image.jpg",
+            "description": "A cultural hub famous for art and food."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Japan",
+        "cities": [
+          {
+            "name": "Tokyo, Japan",
+            "imageUrl": "images/tokyo_image.jpg",
+            "description": "A modern city blending tradition and technology."
+          },
+          {
+            "name": "Kyoto, Japan",
+            "imageUrl": "images/kyoto_image.jpg",
+            "description": "Known for temples and traditional culture."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Brazil",
+        "cities": [
+          {
+            "name": "Rio de Janeiro, Brazil",
+            "imageUrl": "images/rio%20de%20janerio_image.jpg",
+            "description": "Famous for beaches and carnival."
+          },
+          {
+            "name": "São Paulo, Brazil",
+            "imageUrl": "images/sao%20paulo_image.jpg",
+            "description": "A major financial and cultural center."
+          }
+        ]
+      }
+    ],
+    "temples": [
+      {
+        "id": 1,
+        "name": "Angkor Wat, Cambodia",
+        "imageUrl": "images/Angkor%20Wat_image.jpg",
+        "description": "Largest religious monument in the world."
+      },
+      {
+        "id": 2,
+        "name": "Taj Mahal, India",
+        "imageUrl": "images/Taj%20Mahal.jpeg",
+        "description": "Symbol of love and Mughal architecture."
+      }
+    ],
+    "beaches": [
+      {
+        "id": 1,
+        "name": "Bora Bora",
+        "imageUrl": "images/bora-bora_image.jpeg",
+        "description": "Beautiful island with clear water."
+      },
+      {
+        "id": 2,
+        "name": "Copacabana Beach",
+        "imageUrl": "images/Copacabana_image.jpg",
+        "description": "Famous beach in Brazil."
+      }
+    ]
+  }
