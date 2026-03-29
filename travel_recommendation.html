@@ -30,12 +30,18 @@
 
         /* HOME */
         #home {
-            background-image: url('images/sydney_image.avif');
-            background-size: cover;
-            color: white;
-            text-align: center;
-            padding: 100px;
-        }
+    text-align: center;
+    padding: 100px;
+    color: white;
+}
+
+#home h1 {
+    font-size: 40px;
+}
+
+#home h2 {
+    font-size: 25px;
+}
 
         /* RESULTS GRID */
         #results {
@@ -75,31 +81,56 @@
 
 <!-- ✅ HOME -->
 <section id="home">
-    <h1>Explore the World 🌍</h1>
-    <p>Find the best travel destinations easily!</p>
-</section>
+    <h1>🌍 Welcome to Travel Recommendation App</h1>
 
+    <h2>Your Guide to the Best Travel Destinations</h2>
+
+    <p>
+        This website helps you discover amazing travel destinations including beaches, temples, and countries.
+        Simply search and explore the best places around the world!
+    </p>
+</section>
 <!-- ✅ RESULTS -->
 <div id="results"></div>
 
 <!-- ✅ ABOUT -->
 <section id="about">
     <h2>About Us</h2>
-    <p>This website helps users find the best travel destinations.</p>
+
+    <p>
+        Welcome to the Travel Recommendation App! Our mission is to help users discover the best travel destinations around the world easily and efficiently.
+    </p>
+
+    <p>
+        Our vision is to become a trusted platform for travelers by providing accurate, engaging, and user-friendly travel recommendations.
+    </p>
+
+    <p>
+        We aim to guide users in exploring beaches, temples, and countries through a simple and interactive search experience.
+    </p>
 
     <h3>Our Team</h3>
-    <p>Siddhi – Developer</p>
-    <p>Harsh – Designer</p>
+
+    <p><strong>Siddhi</strong> – Frontend Developer (Designed and developed the website interface)</p>
+    <p><strong>Harsh</strong> – UI/UX Designer (Created layout and user experience design)</p>
 </section>
 
 <!-- ✅ CONTACT -->
 <section id="contact">
     <h2>Contact Us</h2>
 
+    <p>If you have any questions or suggestions, feel free to contact us using the form below.</p>
+
     <form>
-        <input type="text" placeholder="Your Name"><br><br>
-        <input type="email" placeholder="Your Email"><br><br>
-        <textarea placeholder="Your Message"></textarea><br><br>
+        <label>Name:</label><br>
+        <input type="text" placeholder="Enter your name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" placeholder="Enter your email" required><br><br>
+
+        <label>Message:</label><br>
+        <textarea placeholder="Write your message here" rows="5" required></textarea><br><br>
+
         <button type="submit">Submit</button>
     </form>
 </section>
