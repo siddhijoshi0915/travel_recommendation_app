@@ -1,75 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Travel Recommendation App</title>
+    <title>TravelBloom</title>
 
     <style>
         body {
             margin: 0;
-            font-family: Arial;
-        }
-
-        /* NAVBAR */
-        nav {
-            background: #333;
-            color: white;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        nav a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-        }
-
-        input, button {
-            padding: 5px;
-        }
-
-        /* HOME */
-        #home {
-    background-image: url("images/sydney_image.avif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url("images/sydney_image.avif");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
 
     /* Overlay effect */
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
 
-    color: white;
+    color: #EDCACA;
     text-align: center;
-}
-#home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-        #home {
-    text-align: center;
-    padding: 100px;
-    color: white;
-}
-#home h1 {
-    font-size: 40px;
-    font-weight: bold;
-}
+        }
 
-#home h2 {
-    font-size: 25px;
-}
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0b2c3d;
+            padding: 10px 20px;
+            color: white;
+        }
 
-#home p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: auto;
-}
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
 
-        /* RESULTS GRID */
+        /* Search */
+        input {
+            padding: 6px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        button {
+            padding: 6px 12px;
+            margin-left: 5px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Results Grid */
         #results {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -77,91 +66,80 @@
             padding: 20px;
         }
 
+        /* Cards */
         .card {
-            border: 1px solid #ccc;
-            padding: 10px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-align: center;
+            color: black;
         }
 
-        section {
-            padding: 40px;
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+        }
+
+        .card p {
+            font-size: 14px;
+            padding: 0 10px 10px;
         }
     </style>
 </head>
 
 <body>
 
-<!-- ✅ NAVBAR -->
+<!-- NAVBAR -->
 <nav>
     <div>
+        <strong>TravelBloom</strong>
         <a href="#home">Home</a>
         <a href="#about">About Us</a>
         <a href="#contact">Contact Us</a>
     </div>
 
     <div>
-        <input type="text" id="searchInput" placeholder="Search (beach, temple, country)">
+        <input type="text" id="searchInput" placeholder="Enter keywords (beach, temple, country)">
         <button onclick="search()">Search</button>
-        <button onclick="clearResults()">Reset</button>
+        <button onclick="clearResults()">Clear</button>
     </div>
 </nav>
 
-<!-- ✅ HOME -->
+<!-- HOME -->
 <section id="home">
-    <h1>🌍 Welcome to Travel Recommendation App</h1>
-
-    <h2>Your Guide to the Best Travel Destinations</h2>
-
-    <p>
-        This website helps you discover amazing travel destinations including beaches, temples, and countries.
-        Simply search and explore the best places around the world!
-    </p>
+    <h1>Explore the World</h1>
+    <p>Find the best travel destinations easily!</p>
 </section>
-<!-- ✅ RESULTS -->
+
+<!-- RESULTS -->
 <div id="results"></div>
 
-<!-- ✅ ABOUT -->
+<!-- ABOUT -->
 <section id="about">
     <h2>About Us</h2>
-
-    <p>
-        Welcome to the Travel Recommendation App! Our mission is to help users discover the best travel destinations around the world easily and efficiently.
-    </p>
-
-    <p>
-        Our vision is to become a trusted platform for travelers by providing accurate, engaging, and user-friendly travel recommendations.
-    </p>
-
-    <p>
-        We aim to guide users in exploring beaches, temples, and countries through a simple and interactive search experience.
-    </p>
+    <p>We help users discover amazing travel destinations.</p>
 
     <h3>Our Team</h3>
-
-    <p><strong>Siddhi</strong> – Frontend Developer (Designed and developed the website interface)</p>
-    <p><strong>Harsh</strong> – UI/UX Designer (Created layout and user experience design)</p>
+    <p>Siddhi – Developer</p>
+    <p>Harsh – Designer</p>
 </section>
 
-<!-- ✅ CONTACT -->
+<!-- CONTACT -->
 <section id="contact">
     <h2>Contact Us</h2>
 
-    <p>If you have any questions or suggestions, feel free to contact us using the form below.</p>
-
-    <form>
-        <label>Name:</label><br>
-        <input type="text" placeholder="Enter your name" required><br><br>
-
-        <label>Email:</label><br>
-        <input type="email" placeholder="Enter your email" required><br><br>
-
-        <label>Message:</label><br>
-        <textarea placeholder="Write your message here" rows="5" required></textarea><br><br>
-
-        <button type="submit">Submit</button>
-    </form>
+    <input type="text" placeholder="Your Name"><br><br>
+    <input type="email" placeholder="Your Email"><br><br>
+    <textarea placeholder="Your Message"></textarea><br><br>
+    <button>Submit</button>
 </section>
 
-<!-- ✅ JS LINK (VERY IMPORTANT) -->
 <script src="travel_recommendation.js"></script>
 
 </body>
